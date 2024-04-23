@@ -24,6 +24,7 @@ docker run -p 8080:8080 ethereum-validator
 ## Design
 - Clients, services implement interfaces to allow easy testing and mocking which is SOLID
 - main.go is the dependency injection entry point
+- requests are lru cached to avoid hitting the same endpoint multiple times
 
 ## Endpoints
 ### GET /blockreward/{slot}
